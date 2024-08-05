@@ -821,12 +821,20 @@ select {
   margin-top: 1rem;
 }
 
+.mt-auto {
+  margin-top: auto;
+}
+
 .flex {
   display: flex;
 }
 
 .table {
   display: table;
+}
+
+.grid {
+  display: grid;
 }
 
 .hidden {
@@ -906,6 +914,10 @@ select {
   list-style-type: disc;
 }
 
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -954,6 +966,10 @@ select {
   border-width: 1px;
 }
 
+.border-\[0\.5px\] {
+  border-width: 0.5px;
+}
+
 .border-b-0 {
   border-bottom-width: 0px;
 }
@@ -968,6 +984,14 @@ select {
 
 .border-t-0 {
   border-top-width: 0px;
+}
+
+.border-b {
+  border-bottom-width: 1px;
+}
+
+.border-l {
+  border-left-width: 1px;
 }
 
 .border-dashed {
@@ -1007,11 +1031,6 @@ select {
 .bg-orange-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(255 109 1 / var(--tw-bg-opacity));
-}
-
-.bg-red-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -1124,6 +1143,14 @@ select {
   font-weight: 700;
 }
 
+.leading-normal {
+  line-height: 1.5;
+}
+
+.leading-tight {
+  line-height: 1.25;
+}
+
 .text-gray-100 {
   --tw-text-opacity: 1;
   color: rgb(197 190 191 / var(--tw-text-opacity));
@@ -1153,8 +1180,16 @@ select {
   color: rgb(74 222 128 );
 }
 
+.marker\:text-white *::marker {
+  color: rgb(255 255 255 );
+}
+
 .marker\:text-green-400::marker {
   color: rgb(74 222 128 );
+}
+
+.marker\:text-white::marker {
+  color: rgb(255 255 255 );
 }
 
 .hover\:bg-orange-500:hover {
@@ -1175,7 +1210,37 @@ select {
     max-width: 180px;
   }
 
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:border-l {
+    border-left-width: 1px;
+  }
+
+  .md\:border-b-0 {
+    border-bottom-width: 0px;
+  }
+
   .md\:leading-normal {
     line-height: 1.5;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:border-r {
+    border-right-width: 1px;
+  }
+
+  .lg\:border-l-0 {
+    border-left-width: 0px;
+  }
+
+  .lg\:border-b-0 {
+    border-bottom-width: 0px;
   }
 }
