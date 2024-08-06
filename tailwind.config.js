@@ -17,11 +17,13 @@ module.exports = {
 					400: '#025DFC',
 				},
 				gray: {
+					50: '#9DADBD',
 					100: '#c5bebf',
 					200: '#d9dbdb',
 					400: '#a9a9a9',
 					500: '#505050',
 					600: '#777',
+					700: '#404040',
 					800: '#3A4856',
 				},
 				orange: {
@@ -30,6 +32,9 @@ module.exports = {
 				},
 				green: {
 					600: '#417100',
+				},
+				neutral: {
+					300: '#F2F4F4',
 				},
 			},
 			keyframes: {
