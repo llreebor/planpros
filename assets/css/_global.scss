@@ -4,9 +4,15 @@
 	--color-text: #0e0e0e;
 	--color-white: #ffffff;
 	--color-lightgray: #00cd84;
+	--color-btn: #d47400;
+	--color-border: #10d9e2;
 
+	--gap: 30px;
 	--btn-gradient: linear-gradient(to bottom, #f90, #e68100);
-	--btn-color: #d47400;
+
+	@media (width <= 768px) {
+		--gap: 20px;
+	}
 }
 
 // Global & Components
@@ -18,24 +24,34 @@
 body {
 	font-family: Satoshi, Sans-serif;
 }
-
 .container {
 	max-width: 1232px;
 	width: 100%;
 	margin: 0 auto;
 	padding: 0 16px;
 }
-
 .section__title {
 	font-size: 55px;
 	font-weight: 700;
 	line-height: 66px;
+	color: var(--color-primary);
 	@media (width <= 992px) {
 		font-size: 42px;
 	}
 	@media (width <= 768px) {
 		font-size: 30px;
 		line-height: 36px;
+	}
+}
+.section__subtitle {
+	font-size: 30px;
+	line-height: 43px;
+	font-weight: 500;
+	color: #000;
+	margin-bottom: 50px;
+	@media (width <= 768px) {
+		font-size: 16px;
+		line-height: normal;
 	}
 }
 .section__text {
@@ -76,7 +92,7 @@ section {
 	font-size: 24px;
 	color: var(--color-white);
 	margin-top: 30px;
-	line-height: normal;
+	line-height: 30px;
 
 	li::before {
 		content: "✔";
@@ -101,6 +117,18 @@ section {
 		}
 	}
 }
+.texts {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+strong,
+b {
+	font-weight: 700;
+}
+i {
+	font-style: italic;
+}
 // Utils classes
 .underline {
 	text-decoration: underline;
@@ -111,9 +139,6 @@ section {
 .text__center {
 	text-align: center;
 }
-.texts {
-	margin-top: 20px;
-	display: flex;
-	flex-direction: column;
-	gap: 14px;
+.mt-row {
+	margin-top: var(--gap);
 }
