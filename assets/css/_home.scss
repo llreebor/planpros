@@ -67,3 +67,19 @@
 		}
 	}
 }
+
+// Const
+.section__cost {
+	.cost__subtitle {
+		font-size: 40px;
+		font-weight: 900;
+		line-height: 43px;
+		color: var(--color-white);
+		margin: 20px 0 34px 0;
+	}
+	.cost__subtext {
+		font-size: 30px;
+		margin-top: 50px;
+		line-height: 43px;
+	}
+}

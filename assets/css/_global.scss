@@ -3,10 +3,12 @@
 	--color-accent: #2a3ffc;
 	--color-text: #0e0e0e;
 	--color-white: #ffffff;
-	--color-lightgray: #00cd84;
 	--color-btn: #d47400;
 	--color-border: #10d9e2;
-
+	--color-card: #ffffe9;
+	--color-card-border: #d9d9d9;
+	--color-card-title: #00cd84;
+	--color-btn-border: #d47400;
 	--gap: 30px;
 	--btn-gradient: linear-gradient(to bottom, #f90, #e68100);
 
@@ -67,6 +69,9 @@ section {
 	padding: 30px 0;
 	&.section__blue {
 		background-color: var(--color-primary);
+	}
+
+	&.with__gradient {
 		position: relative;
 		z-index: 0;
 		&::before {
@@ -129,6 +134,89 @@ b {
 i {
 	font-style: italic;
 }
+
+.price {
+	// .price__card
+	&__card {
+		background: var(--color-card);
+		padding: 30px 20px;
+		border-radius: 8px;
+		border: 1px solid var(--color-card-border);
+		max-width: 870px;
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	// .price__card-title
+	&__card-title {
+		text-transform: uppercase;
+		font-size: 32px;
+		color: var(--color-card-title);
+		font-weight: 700;
+		line-height: normal;
+		text-align: center;
+	}
+
+	// .price__card-btn
+	&__card-btn {
+		padding: 20px 60px;
+		font-size: 60px;
+		font-weight: 700;
+		color: var(--color-white);
+		background: var(--btn-gradient);
+		text-decoration: none;
+		border: 2px solid var(--color-btn-border);
+		border-radius: 5px;
+		text-underline-offset: 4px;
+		margin: 20px 0;
+		@media (width <= 768px) {
+			padding: 5px 30px;
+			font-size: 24px;
+		}
+		&:hover {
+			background: var(--color-btn-border);
+			text-decoration: underline;
+		}
+	}
+
+	// .price__card-text
+	&__card-text {
+		font-size: 22px;
+		font-weight: 400;
+		line-height: 40px;
+		color: var(--color-accent);
+		font-weight: 700;
+		text-align: center;
+		@media (width <= 768px) {
+			font-size: 16px;
+		}
+	}
+
+	// .price__card-image
+	&__card-image {
+		max-width: 240px;
+		width: 100%;
+		height: auto;
+	}
+
+	// .price__card-copy
+	&__card-copy {
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 40px;
+		color: var(--color-text);
+		margin-top: 20px;
+		text-align: center;
+		line-height: 24px;
+		@media (width <= 768px) {
+			margin-top: 10px;
+		}
+	}
+}
+
 // Utils classes
 .underline {
 	text-decoration: underline;
