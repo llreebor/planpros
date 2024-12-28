@@ -135,6 +135,7 @@ i {
 	font-style: italic;
 }
 
+// Price Card
 .price {
 	// .price__card
 	&__card {
@@ -221,10 +222,10 @@ i {
 .underline {
 	text-decoration: underline;
 }
-.text__white {
+.text-white {
 	color: var(--color-white);
 }
-.text__center {
+.text-center {
 	text-align: center;
 }
 .mt-row {

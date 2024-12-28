@@ -391,11 +391,11 @@ i {
   text-decoration: underline;
 }
 
-.text__white {
+.text-white {
   color: var(--color-white);
 }
 
-.text__center {
+.text-center {
   text-align: center;
 }
 
