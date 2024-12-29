@@ -11,7 +11,7 @@
 	--color-btn-border: #d47400;
 	--color-cta: #0010a4;
 	--color-violet: #831bf0;
-
+	--color-icon: #cfcfcf;
 	--gap: 30px;
 	--btn-gradient: linear-gradient(to bottom, #f90, #e68100);
 
@@ -150,4 +150,7 @@ i {
 }
 .mt-row {
 	margin-top: var(--gap);
+}
+.overflow-hidden {
+	overflow: hidden;
 }

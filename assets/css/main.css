@@ -167,6 +167,7 @@ table {
   --color-btn-border: #d47400;
   --color-cta: #0010a4;
   --color-violet: #831bf0;
+  --color-icon: #cfcfcf;
   --gap: 30px;
   --btn-gradient: linear-gradient(to bottom, #f90, #e68100);
 }
@@ -328,6 +329,10 @@ i {
 
 .mt-row {
   margin-top: var(--gap);
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .bonus__wrapper {
@@ -643,6 +648,103 @@ i {
 }
 .offer__card .price__card-copy:last-child {
   margin-top: 10px;
+}
+
+.accordion {
+  margin-top: 40px;
+}
+.accordion__item:hover .accordion__trigger-text {
+  color: var(--color-accent);
+}
+.accordion__item:hover .accordion__icon-line--1,
+.accordion__item:hover .accordion__icon-line--2 {
+  background: var(--color-accent);
+}
+.accordion__item.active .accordion__icon-line--1 {
+  background: var(--color-accent);
+}
+.accordion__item.active .accordion__icon-line--2 {
+  rotate: 0deg;
+  translate: 0 0;
+  opacity: 0;
+}
+.accordion__item.active .accordion__trigger-text {
+  color: var(--color-accent);
+}
+.accordion__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0;
+  cursor: pointer;
+}
+.accordion__trigger-text {
+  font-size: 28px;
+  color: var(--color-text);
+  line-height: 33px;
+  transition: 0.3s color;
+  font-weight: 500;
+}
+@media (width <= 768px) {
+  .accordion__trigger-text {
+    font-size: 20px;
+  }
+}
+.accordion__icon-line--1 {
+  display: flex;
+  width: 14px;
+  height: 3px;
+  border-radius: 8px;
+  background: var(--color-icon);
+  transition: 0.3s all;
+}
+.accordion__icon-line--2 {
+  display: flex;
+  width: 14px;
+  height: 3px;
+  border-radius: 8px;
+  background: var(--color-icon);
+  rotate: 90deg;
+  translate: 0 -3px;
+  transition: 0.3s all;
+}
+.accordion__content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: 0.3s ease all;
+  border-top: 1px solid var(--color-icon);
+}
+.accordion__content.active {
+  padding-top: 10px;
+  grid-template-rows: 1fr;
+  border-bottom: 1px solid var(--color-icon);
+}
+.accordion__content-inner {
+  padding-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.accordion__content-inner p {
+  line-height: 30px;
+  font-size: 20px;
+  color: var(--color-text);
+}
+@media (width <= 768px) {
+  .accordion__content-inner p {
+    font-size: 16px;
+  }
+}
+.accordion__content-inner ul {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-left: 40px;
+  list-style-type: disc;
+}
+.accordion__content-inner ul li::marker {
+  color: var(--color-card-title);
 }
 
 header {
