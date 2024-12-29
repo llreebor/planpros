@@ -68,7 +68,7 @@
 	}
 }
 
-// Const
+// Cost
 .section__cost {
 	.cost__subtitle {
 		font-size: 40px;
@@ -81,5 +81,184 @@
 		font-size: 30px;
 		margin-top: 50px;
 		line-height: 43px;
+	}
+}
+
+// Price Card
+.price {
+	// .price__card
+	&__card {
+		background: var(--color-card);
+		padding: 30px 20px;
+		border-radius: 8px;
+		border: 1px solid var(--color-card-border);
+		max-width: 870px;
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	// .price__card-title
+	&__card-title {
+		text-transform: uppercase;
+		font-size: 32px;
+		color: var(--color-card-title);
+		font-weight: 700;
+		line-height: normal;
+		text-align: center;
+	}
+
+	// .price__card-btn
+	&__card-btn {
+		padding: 20px 60px;
+		font-size: 60px;
+		font-weight: 700;
+		color: var(--color-white);
+		background: var(--btn-gradient);
+		text-decoration: none;
+		border: 2px solid var(--color-btn-border);
+		border-radius: 5px;
+		text-underline-offset: 4px;
+		margin: 20px 0;
+		display: inline-block;
+		@media (width <= 768px) {
+			padding: 5px 30px;
+			font-size: 24px;
+		}
+		&:hover {
+			background: var(--color-btn-border);
+			text-decoration: underline;
+		}
+	}
+
+	// .price__card-text
+	&__card-text {
+		font-size: 22px;
+		font-weight: 400;
+		line-height: 40px;
+		color: var(--color-accent);
+		font-weight: 700;
+		text-align: center;
+		@media (width <= 768px) {
+			font-size: 16px;
+		}
+	}
+
+	// .price__card-image
+	&__card-image {
+		max-width: 240px;
+		width: 100%;
+		height: auto;
+	}
+
+	// .price__card-copy
+	&__card-copy {
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 40px;
+		color: var(--color-text);
+		margin-top: 20px;
+		text-align: center;
+		line-height: 24px;
+		@media (width <= 768px) {
+			margin-top: 10px;
+		}
+	}
+}
+
+// CTA
+.section {
+	// .section__cta
+
+	&__cta {
+	}
+}
+.cta {
+	background: var(--color-cta);
+	position: relative;
+	border-radius: 20px;
+	padding: 30px 120px;
+	z-index: 0;
+	@media (width <= 992px) {
+		padding: 30px;
+	}
+	&::before {
+		position: absolute;
+		content: "";
+		inset: 0;
+		z-index: -1;
+		background-image: url("../images/elipse-bg-dark-1.png");
+		background-position: 239px 0;
+		background-repeat: no-repeat;
+	}
+	// .cta__title
+	&__title {
+		font-size: 44px;
+		font-weight: 700;
+		line-height: 53px;
+		color: var(--color-white);
+	}
+
+	// .cta__image
+	&__image {
+		max-width: 750px;
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		margin: 0 auto;
+		display: block;
+		margin-top: 30px;
+	}
+	&__card {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		margin-top: 50px;
+		gap: 20px;
+	}
+	// .cta__total
+	&__total {
+		font-size: 42px;
+		line-height: 53px;
+		color: var(--color-white);
+		text-underline-offset: 4px;
+	}
+
+	// .cta__subtitle
+	&__subtitle {
+		font-size: 28px;
+		color: var(--color-white);
+		line-height: 33px;
+	}
+
+	// .cta__price
+	&__price {
+		font-size: 42px;
+		line-height: normal;
+		color: var(--color-card-title);
+	}
+
+	// .cta__subtext
+	&__subtext {
+		font-size: 20px;
+		color: var(--color-white);
+		line-height: normal;
+	}
+
+	// .cta__link
+	&__link {
+		font-size: 28px;
+		line-height: 33px;
+		color: var(--color-card-title);
+		text-decoration: none;
+		text-align: center;
+	}
+
+	// .cta__copy
+	&__copy {
+		margin-top: 0;
+		color: var(--color-white);
 	}
 }
