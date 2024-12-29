@@ -338,7 +338,25 @@ i {
 
 .bonus__wrapper {
   padding: 30px 0;
+  z-index: 0;
+  position: relative;
+}
+.bonus__wrapper::before {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-image: url("../images/bonus-bg.png");
+}
+.bonus__wrapper:not(:last-child) {
   border-bottom: 1px solid var(--color-border-lightblue);
+}
+.bonus__wrapper.bonus__wrapper-odd::before {
+  background-position: -239px 0px;
+  background-repeat: no-repeat;
+}
+.bonus__wrapper.bonus__wrapper-even::before {
+  background-position: center center;
 }
 
 .bonus__container {
