@@ -1,21 +1,4 @@
-// function accordion() {
-// 	const items = document.querySelectorAll(".accordion__item-trigger")
-// 	items.forEach((item) => {
-// 		item.addEventListener("click", () => {
-// 			const parent = item.parentNode
-// 			if (parent.classList.contains("accordion__item-active")) {
-// 				parent.classList.remove("accordion__item-active")
-// 			} else {
-// 				document
-// 					.querySelectorAll(".accordion__item")
-// 					.forEach((child) => child.classList.remove("accordion__item-active"))
-// 				parent.classList.add("accordion__item-active")
-// 			}
-// 		})
-// 	})
-// }
-// accordion()
-
+// FAQ
 function accordion() {
 	const items = document.querySelectorAll(".accordion__item")
 	const triggers = document.querySelectorAll(".accordion__trigger")
@@ -49,3 +32,42 @@ function accordion() {
 	})
 }
 accordion()
+
+// Future Date
+function getFutureDate() {
+	const today = new Date() // Current date
+	today.setDate(today.getDate() + 3) // Add 3 days
+
+	// Array of month names
+	const months = [
+		"January",
+		"February",
+		"March",
+		"April",
+		"May",
+		"June",
+		"July",
+		"August",
+		"September",
+		"October",
+		"November",
+		"December",
+	]
+
+	// Format the date
+	const month = months[today.getMonth()]
+	const day = today.getDate()
+	const year = today.getFullYear()
+
+	return `${month} ${day} ${year}`
+}
+
+// Insert the date into all elements with the class "future-date"
+window.onload = function () {
+	const dateElements = document.querySelectorAll(".future-date") // Select all elements with the class
+	const futureDate = getFutureDate()
+
+	dateElements.forEach((element) => {
+		element.innerText = futureDate
+	})
+}

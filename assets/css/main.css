@@ -336,6 +336,10 @@ i {
   overflow: hidden;
 }
 
+.grow {
+  flex-grow: 1;
+}
+
 .bonus__wrapper {
   padding: 30px 0;
   z-index: 0;
@@ -775,6 +779,9 @@ i {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
   margin-top: 40px;
 }
 @media (width <= 768px) {
