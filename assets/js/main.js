@@ -59,7 +59,7 @@ function getFutureDate() {
 	const day = today.getDate()
 	const year = today.getFullYear()
 
-	return `${month} ${day} ${year}`
+	return `${month} ${day}, ${year}.`
 }
 
 // Insert the date into all elements with the class "future-date"

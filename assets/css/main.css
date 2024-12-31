@@ -477,6 +477,12 @@ i {
   background: var(--color-btn-border);
   text-decoration: underline;
 }
+.price__card-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
 .price__card-text {
   font-size: 22px;
   font-weight: 400;
@@ -488,6 +494,7 @@ i {
 @media (width <= 768px) {
   .price__card-text {
     font-size: 16px;
+    line-height: 24px;
   }
 }
 .price__card-image {

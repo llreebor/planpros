@@ -156,6 +156,13 @@
 		}
 	}
 
+	// .price__card-link {
+	&__card-link {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-decoration: none;
+	}
 	// .price__card-text
 	&__card-text {
 		font-size: 22px;
@@ -166,6 +173,7 @@
 		text-align: center;
 		@media (width <= 768px) {
 			font-size: 16px;
+			line-height: 24px;
 		}
 	}
 
